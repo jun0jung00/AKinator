@@ -1,3 +1,3 @@
-from Akipkg.Akinator from *
+from Akipkg.Akinator import *
 game=Akinator()
 game.play()
