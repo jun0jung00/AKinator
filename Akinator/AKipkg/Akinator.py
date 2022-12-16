@@ -59,7 +59,7 @@ class Akinator:
       name=''.join(self.guess_list)
       result=None
       while result not in ['네', '아니요']:
-        result=input('생각하시는 교수님이 {} 교수님이 맞으신가요? 네 아니요로 답해주세요.'.format(name커))
+        result=input('생각하시는 교수님이 {} 교수님이 맞으신가요? 네 아니요로 답해주세요.'.format(name))
         if result=='네':
           print('제가 맞췄군요 !!')
           print('이대로 게임을 종료하겠습니다.')
