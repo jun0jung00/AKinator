@@ -10,7 +10,6 @@ Original file is located at
 #팀 프로젝트 아키네이터
 import csv
 import time
-f=open('교수진.csv','r')
 class Akinator:
   def __init__(self):
     self.guess_list=[]
@@ -72,47 +71,3 @@ class Akinator:
     if len(self.guess_list)>1:
       print('한명으로 좁히지는 못하였지만 이중에 생각하시는 분이 존재합니까?')
       print(','.join(self.guess_list))
-
-import csv
-f=open('교수진.csv','r')
-dic = csv.DictReader(f)
-guess_list=[]
-file_list=[]
-gender=None
-for i in dic:
-  file_list.append(i)
-print(file_list)
-
-import csv
-f=open('교수진.csv','r')
-dic = csv.DictReader(f)
-guess_list=[]
-file_list=[]
-gender=None
-for i in dic:
-  file_list.append(i)
-while gender not in ['남','여']:
-      gender=input('남,여 중에 입력하여주십시오.')
-for i in file_list:
-      print(i)
-      if i['성별']==gender:
-        guess_list.append(i['이름'])
-ob=None
-while ob not in ['수학','과학','컴퓨팅']:
-      ob=input('주과목이 무엇이십니까? 수학,과학,컴퓨팅 중에 선택해주세요.')
-for i in file_list:
-  print(i)
-  if i['과목']!=ob:
-    print(i)
-    if i['이름'] in guess_list:
-      guess_list.remove(i['이름'])
-      print(i)
-print(guess_list)
-
-import csv
-import pandas as pd
-data = pd.read_csv("교수진.csv", sep=",")
-data.head()
-for i in data:
-  print(i)
-
